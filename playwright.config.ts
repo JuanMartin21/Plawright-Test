@@ -37,7 +37,7 @@ export default defineConfig({
     headless: true,
     viewport: { width: 1920, height: 1080 },
     launchOptions: {
-      slowMo: 1000
+      slowMo: process.env.CI ? 0 : 1000
     }
   },
 
