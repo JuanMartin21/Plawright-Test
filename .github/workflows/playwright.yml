@@ -26,7 +26,9 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run tests
-        run: npx playwright test
+        run: |
+          npx playwright test
+          echo "Código de salida: $?"
         env:
           CONTALINKQAURL: ${{ secrets.CONTALINKQAURL }}
           ACCESSCODE: ${{ secrets.ACCESSCODE }}
