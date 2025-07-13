@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -26,7 +26,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run tests
-        run: npx playwright test
+        run: npx playwright test --headed=false
         env:
           CONTALINKQAURL: ${{ secrets.CONTALINKQAURL }}
           ACCESSCODE: ${{ secrets.ACCESSCODE }}
