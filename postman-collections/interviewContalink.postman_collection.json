@@ -1,0 +1,354 @@
+{
+	"info": {
+		"_postman_id": "175d4cae-63fb-4e03-94a0-a087ed463eaf",
+		"name": "interviewContalink",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19118652",
+		"_collection_link": "https://grey-robot-454149.postman.co/workspace/automation~8e7820b0-0a5e-4c95-ac27-409476efe553/collection/19118652-175d4cae-63fb-4e03-94a0-a087ed463eaf?action=share&source=collection_link&creator=19118652"
+	},
+	"item": [
+		{
+			"name": "Get one",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "UXTY789@!!1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://candidates-api.contalink.com/V1/invoices/9279",
+					"protocol": "https",
+					"host": [
+						"candidates-api",
+						"contalink",
+						"com"
+					],
+					"path": [
+						"V1",
+						"invoices",
+						"9279"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "UXTY789@!!1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://candidates-api.contalink.com/V1/invoices/",
+					"protocol": "https",
+					"host": [
+						"candidates-api",
+						"contalink",
+						"com"
+					],
+					"path": [
+						"V1",
+						"invoices",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get empty list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "UXTY789@!!1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://candidates-api.contalink.com/V1/invoices/9279",
+					"protocol": "https",
+					"host": [
+						"candidates-api",
+						"contalink",
+						"com"
+					],
+					"path": [
+						"V1",
+						"invoices",
+						"9279"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create new one",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "UXTY789@!!1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"invoice_number\": \"FAC-992\",\n    \"total\": 7000,\n    \"invoice_date\": \"11/07/2025 5:41 PM\",\n    \"status\": \"Vigente\",\n    \"active\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://candidates-api.contalink.com/V1/invoices/",
+					"protocol": "https",
+					"host": [
+						"candidates-api",
+						"contalink",
+						"com"
+					],
+					"path": [
+						"V1",
+						"invoices",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create new one (422 error)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "UXTY789@!!1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    //\"invoice_number\": \"FAC-992\",\n    \"total\": 7000,\n    \"invoice_date\": \"11/07/2025 5:41 PM\",\n    \"status\": \"Vigente\",\n    \"active\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://candidates-api.contalink.com/V1/invoices/",
+					"protocol": "https",
+					"host": [
+						"candidates-api",
+						"contalink",
+						"com"
+					],
+					"path": [
+						"V1",
+						"invoices",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create new one (400 error)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "UXTY789@!!1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    //\"invoice_number\": \"FAC-992\",\n    \"total\": 7000,\n    \"invoice_date\": \"11/07/2025 5:41 PM\",\n    \"status\": \"Vigente\",\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://candidates-api.contalink.com/V1/invoices/",
+					"protocol": "https",
+					"host": [
+						"candidates-api",
+						"contalink",
+						"com"
+					],
+					"path": [
+						"V1",
+						"invoices",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "UXTY789@!!1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://candidates-api.contalink.com/V1/invoices/9287",
+					"protocol": "https",
+					"host": [
+						"candidates-api",
+						"contalink",
+						"com"
+					],
+					"path": [
+						"V1",
+						"invoices",
+						"9287"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete one (401 error)",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://candidates-api.contalink.com/V1/invoices/9287",
+					"protocol": "https",
+					"host": [
+						"candidates-api",
+						"contalink",
+						"com"
+					],
+					"path": [
+						"V1",
+						"invoices",
+						"9287"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "UXTY789@!!1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"total\": 10000,\n    \"invoice_date\": \"11/07/2025 5:44 PM\",\n    \"status\": \"Pendiente\",\n    \"active\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://candidates-api.contalink.com/V1/invoices/9286",
+					"protocol": "https",
+					"host": [
+						"candidates-api",
+						"contalink",
+						"com"
+					],
+					"path": [
+						"V1",
+						"invoices",
+						"9286"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy 2",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "UXTY789@!!1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"total\": 12000\n   \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://candidates-api.contalink.com/V1/invoices/9286",
+					"protocol": "https",
+					"host": [
+						"candidates-api",
+						"contalink",
+						"com"
+					],
+					"path": [
+						"V1",
+						"invoices",
+						"9286"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
