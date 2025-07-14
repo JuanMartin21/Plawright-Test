@@ -1,4 +1,4 @@
-import { Page, Locator, expect } from "@playwright/test";
+import { Page, Locator, expect } from '@playwright/test';
 
 export default class LoginPage {
   readonly page: Page;
@@ -10,13 +10,11 @@ export default class LoginPage {
     this.accessCode = page.locator('input, #access-code');
     this.submitButton = page.getByRole('button', { name: 'Validar Código' });
   }
-  
-  async accessDashboard(code: string){
-    console.log('Código recibido:', code);
+
+  async accessDashboard(code: string) {
     await expect(this.accessCode).toBeVisible();
     await this.accessCode.click();
     await this.accessCode.fill(code);
     await this.submitButton.click();
-
   }
 }

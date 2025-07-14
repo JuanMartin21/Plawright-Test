@@ -19,7 +19,7 @@ export default class createInvoicePage {
     this.InvoiceTotalTxt = page.locator('#total');
     this.statusSelect = page.getByLabel('Estado');
     this.createInvoiceBtn = page.getByRole('button', { name: 'Crear Factura' });
-    this.rowInvoiceNumber = page.locator('//tbody/tr[3]/td[1]');
+    this.rowInvoiceNumber = page.locator('//tbody/tr[4]/td[1]');
     this.rowInvoiceId = page.locator('//tbody/tr[3]/th');
     this.clearFilter = page.getByRole('button', { name: 'Limpiar Filtros' });
   }
