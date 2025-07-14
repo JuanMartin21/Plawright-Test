@@ -18,14 +18,13 @@ test.describe('When creating a new invoice', () => {
     const status = invoiceData.statuses[0];
 
     await test.step('verifies the invoice is created successfully', async () => {
-      const { code, total } = await newInvoice.createNewInvoice();
+      const { code } = await newInvoice.createNewInvoice();
       await newInvoice.invoiceStatus(status);
       await newInvoice.clickCreateInvoiceButton();
 
-      const invoiceCodeCell = page.locator(`text=${code}`);
-
       const celda = newInvoice.rowInvoiceNumber;
       await expect(celda).toHaveText(code);
+      console.log(`Invoice code: ${code}`);
     });
   });
 
