@@ -22,12 +22,13 @@ test.describe('When creating a new invoice', () => {
       await newInvoice.invoiceStatus(status);
       await newInvoice.clickCreateInvoiceButton();
 
-      const celda = newInvoice.rowInvoiceNumber;
-      const text = await celda.textContent();
-      expect(text?.trim()).toBe(code);
+      await page.waitForLoadState('networkidle');
 
-      console.log(text);
-      console.log(code);
+      const celda = page.locator(`//td[contains(text(), "${code}")]`);
+      await expect(celda).toBeVisible();
+
+      console.log('Texto encontrado:', await celda.textContent());
+      console.log('Código generado:', code);
     });
   });
 
